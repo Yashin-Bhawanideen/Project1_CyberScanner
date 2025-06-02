@@ -1,0 +1,31 @@
+﻿@{
+	ViewData["Title"] = "Threat Detector";
+}
+<img src="~/background.jpg" class="background" />
+
+<h1 class="contact" style="font-size:250%">Connect with us on</h1>
+
+@* this is the email icon that will redirect the user if they click on it *@
+<div class="email">
+
+    <a href="mailto:example@example.com" title="Send me an email">
+
+        @* image has to be directly styled not in the site.css  *@
+        <img src="~/Email_icon.jpg" style="width: 150px; height:150px; border-radius:50%">
+    </a>
+
+
+</div>
+<div class="instagram">
+    @* target blank opens a new page and redirects the user to the link they clicked on  *@
+    <a href="https://www.instagram.com/yash4_og_madhir" target="_blank" title="Follow me on Instagram">
+        <img src="~/instagram_icon.jpg" style="width: 150px; height:150px; border-radius:50%"/>
+
+
+    </a>
+</div>
+
+@* title allows the user to see what is siad if they hover over the icon with their pointer *@
+<div class="phone" title="Phone: 070 685 1909">
+    <img src="~/Phone_icon.jpg" style="width: 150px; height:150px; border-radius:50%" />
+</div>

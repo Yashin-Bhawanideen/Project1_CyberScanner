@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Threat Detector";
+}
+<img src="~/background.jpg" class="background" />
+
+<h1 class="scanNowHead" style="font-size:250%" >Try CyberScanner</h1>
+
+<div class="containerUpload">
+    <h3>Upload File</h3>
+
+    @* Display success or error messages from controller, this shows if the file was either succesfully uploaded or not and if the file was scanned with or without malware detected*@
+    @if (ViewBag.Message != null)
+    {
+        var message = ViewBag.Message.ToString();
+        if (message.Contains("⚠️"))
+        {
+            <div class="alert alert-danger mt-3">@message</div>
+        }
+        else
+        {
+            <div class="alert alert-success mt-3">@message</div>
+        }
+    }
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success mt-3">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger mt-3">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+    @if (TempData["ScanResult"] != null)
+    {
+        <div class="alert alert-info mt-3">
+            @TempData["ScanResult"]
+        </div>
+    }
+
+    @* this is just what the layout of the upload feature, its just the frontend part not where the action takes place*@
+    <form asp-action="UploadFile" asp-controller="Upload" method="post" enctype="multipart/form-data" class="mt-3">
+        <div class="mb-3">
+            <label for="file" class="form-label">Choose a file:</label>
+            <input type="file" name="file" id="file" accept="*/*" class="form-control" required />
+            <small class="text-muted">Only one file is allowed.</small>
+        </div>
+        @* includes a button, this button performs the ation in the uploadController*@
+        <button type="submit" class="scanBtn" target="_blank">Scan File</button>
+       
+    </form>
+
+  
+  
+</div>

@@ -1,0 +1,275 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.background {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.WelcomeInfo {
+    position: absolute;
+    top: 200px;
+    color: #f1f1f1;
+   
+    padding: 20px;
+    left: 50px;
+/*    background-color: rgba(0, 0, 0, 0.5);*/
+}
+
+.heading {
+    position: absolute;
+    top: 150px;
+    color: red;
+    left: 80px;
+/*    background-color: rgba(0, 0, 0, 0.5);*/
+}
+.CyberBotHeading {
+    position: absolute;
+    top: 150px;
+    color: red;
+    right: 230px;
+/*    background-color: rgba(0, 0, 0, 0.5);*/
+}
+.CyberBot {
+    position: absolute;
+    top: 200px;
+    color: white;
+    right: 40px;
+    padding:20px;
+/*    background-color: rgba(0, 0, 0, 0.5);*/
+}
+.BotBtn {
+    position: absolute;
+    top: 100px;
+    right: 310px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    border-color:red;
+    color: black;
+    font-family: sans-serif;
+    font-size: 20px;
+    
+}
+.benefit {
+    color: black;
+    position: absolute;
+    padding: 10px;
+    top: 690px;
+    left: 130px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    height: 30%;
+}
+.pros {
+    color: black;
+    position: absolute;
+    padding: 10px;
+    top: 940px;
+    left: 110px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 40%;
+    height: 50%;
+}
+.cons {
+    color: black;
+    position: absolute;
+    padding: 10px;
+    top: 940px;
+    right: 120px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 40%;
+    height: 50%;
+}
+.insights {
+    position: absolute;
+    top: 1400px;
+    color: black;
+    left: 110px;
+}
+
+
+.news {
+    color: black;
+    position: absolute;
+    padding: 10px;
+    top: 1460px;
+    left: 110px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #ff0000b6;
+    width: 24%;
+    height: 60%;
+}
+.image1 {
+    width: 300px; /* Your custom width */
+    height: 135px; /* Your custom height */
+    border-radius: 10px;
+    position: absolute; /* Optional: position it freely inside the container */
+    top: 10px; /* Example positioning */
+    left: 10px;
+}
+.textOfNews {
+    position: absolute;
+    top: 150px;
+    left: 10px;
+   
+   
+}
+.newsBtn {
+/*    margin top moves the button down (if value is negative it moves up) */
+    margin-top: 90px;
+
+/*    margin left moves the button right (if value is negative it moves left) */
+    margin-left:105px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.cases {
+    color: black;
+    position: absolute;
+    padding: 10px;
+    top: 1460px;
+    left: 550px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #ff0000b6;
+    width: 24%;
+    height: 60%;
+}
+.image2 {
+    width: 300px; /* Your custom width */
+    height: 135px; /* Your custom height */
+    border-radius: 10px;
+    position: absolute; /* Optional: position it freely inside the container */
+    top: 10px; /* Example positioning */
+    left: 10px;
+}
+.textOfCases {
+    position: absolute;
+    top: 150px;
+    left: 10px;
+}
+.casesBtn {
+    /*    margin top moves the button down (if value is negative it moves up) */
+    margin-top: 66px;
+    /*    margin left moves the button right (if value is negative it moves left) */
+    margin-left: 105px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.containerUpload {
+    position: absolute;
+    left: 90px;
+    top: 270px;
+    color:white;
+    
+}
+.scanNowHead {
+    position: absolute;
+    top: 150px;
+    color: red;
+    left: 80px;
+   
+}
+.scanBtn {
+    position: absolute;
+    left: 450px;
+    top: 1px;
+    color: black;
+    background-color: red;
+    border-radius: 50%;
+    font-family: sans-serif;
+    font-size: 25px;
+    width: 130px;
+    height: 110px;
+    border-color: black;
+}
+
+.contact {
+    position: absolute;
+    top: 150px;
+    color: red;
+    left: 80px;
+    
+}
+.email {
+
+    position: absolute;
+    top: 320px;
+    /*  right align shifts the image to the right by 300pixels*/
+    left: 310px;
+   
+}
+
+.instagram {
+    position: absolute;
+    top: 320px;
+    /*  left align shifts the image to the right by 300pixels*/
+    left: 610px;
+   
+}
+
+.phone {
+    position: absolute;
+    top: 320px;
+    /*  left align shifts the image to the right by 300pixels*/
+    right: 300px;
+  
+}
+
+
+
+/*shifting the index footer lower*/
+footer {
+    position: absolute;
+    top: 2000px;
+    width: 100%;
+    height: 60px;
+    left:0px;
+   
+    line-height: 60px;
+    color: white;
+}

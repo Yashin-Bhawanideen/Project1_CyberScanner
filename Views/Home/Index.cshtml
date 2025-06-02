@@ -1,0 +1,157 @@
+﻿@{
+	ViewData["Title"] = "Threat Detector";
+}
+<img src="~/background.jpg" class="background" />
+
+<h1 class="heading" style="font-size:250%">Welcome to CyberScanner</h1>
+
+<div class="WelcomeInfo">
+
+	<p style="font-size:110%">
+		Stay protected using our threat detection scanner. <br />
+		A tool to analyze any threats that are hidden within your files.<br />
+		Your digital safety starts here.
+
+
+
+	</p>
+
+</div>
+
+@* our cyberBot that appears at the home page *@
+<h1 class="CyberBotHeading" style="font-size:250%">Ask CyberBoT</h1>
+
+<div class="CyberBot">
+
+	<p style="font-size:110%">
+		Our user friendly Bot, if you have any querires regarding<br /> cyber threats or what are cyber threats, ask CyberBot.
+		@* ask button *@
+		<button onclick="toggleChat()" class="BotBtn">Ask CyberBot</button>
+
+
+	</p>
+
+</div>
+@* chat bot popup *@
+<div id="chatPopup" style="display:none; position:absolute; top:300px; right:20px; width:300px; height:300px; background:#f9f9f9; border:1px solid #ccc; padding:10px; box-shadow:0 0 10px rgba(0,0,0,0.3); border-radius:8px; z-index:1000;">
+	<h4 style="margin-top:0;">CyberBot</h4>
+	<div id="chatBox" style="height:200px; overflow-y:auto; background:#fff; padding:10px; border:1px solid #ccc; margin-bottom:10px; font-size:90%;"></div>
+	<input type="text" id="userInput" placeholder="Type your question..." style="width:70%; padding:5px;">
+	<button onclick="sendMessage()" style="padding:5px 10px; border-radius:5px">Send</button>
+</div>
+
+
+@* the script for user input, all te questions or input that the user enters...the questions are limited to information *@
+<script>
+	function toggleChat() {
+	  const chat = document.getElementById("chatPopup");
+	  chat.style.display = (chat.style.display === "none" ? "block" : "none");
+	}
+
+	function sendMessage() {
+	  const input = document.getElementById("userInput");
+	  const chatBox = document.getElementById("chatBox");
+	  const userMsg = input.value.trim();
+
+	  if (!userMsg) return;
+
+	  // Display user message
+	  chatBox.innerHTML += `<div><strong>You:</strong> ${userMsg}</div>`;
+
+	  // Bot simulated response
+	  setTimeout(() => {
+		const botReply = getBotReply(userMsg);
+		chatBox.innerHTML += `<div><strong>CyberBot:</strong> ${botReply}</div>`;
+		chatBox.scrollTop = chatBox.scrollHeight;
+	  }, 600);
+
+	  input.value = "";
+	}
+	//all the questions, we as developer can add more questions and answers to the bot, but this function only picks up keywords
+	function getBotReply(msg) {
+	  msg = msg.toLowerCase();
+	  if (msg.includes("hello") || msg.includes("hi")) return "Hello! I'm CyberBot. Ask me anything about cyber threats.";
+	  if(msg.includes("about")) return "I can dicuss various aspects related to cyber security, threats and types of threats";
+	  if (msg.includes("cyber threat")) return "A cyber threat is any malicious act that seeks to damage data, steal data, or disrupt digital life.";
+	  if(msg.includes("cyber security")) return "Cyber security is the practice of protecting systems, networks, and programs from digital attacks.";
+	  if(msg.includes("types of threats") || msg.includes("type of threats")) return "Common types include malware, social engineering, phishing, ransomware, and denial-of-service (DoS) attacks";
+      if(msg.includes("phishing")) return "Phishing is a type of cyber attack where attackers impersonate legitimate organizations to steal sensitive information.";
+	  if(msg.includes("malware")) return "Malware is malicious software designed to harm, exploit, or otherwise compromise a computer system.";
+	  if(msg.includes("ransomware")) return "Ransomware is a type of malware that encrypts a victim's files and demands payment for the decryption key.";
+	  if(msg.includes("social engineering")) return "Social engineering is a manipulation technique that exploits human psychology to gain confidential information.";
+	  if(msg.includes("denial of service") || msg.includes("dos")) return "A denial-of-service (DoS) attack is an attempt to make a machine or network resource unavailable to its intended users.";
+	  if(msg.includes("protect") || msg.includes("protection") || msg.includes("prevent")) return "To protect against cyber threats, use strong passwords, keep software updated, and be cautious with emails and links. Install anti-virus protection software";
+	  if(msg.includes("thank") || msg.includes("thanks")) return "You're welcome! If you have more questions, feel free to ask.";
+	  return "I'm still learning! Try asking something about cyber threats or protection.";
+	}
+</script>
+
+
+@* the rest is just basic information displayed like a site *@
+<div class="benefit">
+	<h1 style="font-size:250%; text-align:center ">Benefits of CyberScanner</h1>
+	<p>
+		CyberScanner is a reliable cyber threat detector.
+		This platform allows users to scan files for potential threats and vulnerabilities online.
+		CyberScanner identifies potential threats in files, including malware, viruses, and other security risks.
+	</p>
+</div>
+
+<div class="pros">
+	<h1 style="font-size:250%; text-align:center ">Why use CyberScanner?</h1>
+	<p>
+		CyberScanner prevents data breaches and protects sensitive information.
+		It provides a user-friendly interface for scanning files online.
+		CyberScanner is a cost-effective solution for individuals and businesses to enhance their cybersecurity.
+		CyberScanner can be used anywhere at anytime.
+	</p>
+</div>
+
+<div class="cons">
+	<h1 style="font-size:250%; text-align:center ">Consequences for not using CyberScanner?</h1>
+	<p>
+		User's personal information will be at risk of being stolen or misused.
+		Without CyberScanner, users may face data breaches, identity theft, and financial loss.
+		Recovering stolen data can be costly and time-consuming.
+
+	</p>
+</div>
+
+<h1 class="insights" style="font-size:200%">Scout insights and additional resources</h1>
+
+<div class="news">
+	<img src="~/images.jpg" class="image1" />
+	<p class="textOfNews">
+		Stay updated with the latest news and insights on cyber threats and security measures.<br />
+
+		<a href="https://thehackernews.com/" class="newsBtn" target="_blank">News</a>
+	</p>
+</div>
+
+<div class="cases">
+	<img src="~/cases.jpg" class="image2" />
+	<p class="textOfCases">
+		Explore real-world case studies to understand the impact
+		of cyber threats and the effectiveness of various security measures.<br />
+
+		<a href="https://www.csis.org/programs/strategic-technologies-program/significant-cyber-incidents" class="casesBtn" target="_blank">Cases</a>
+	</p>
+</div>
+
+
+
+
+
+@* create a separate footer in each view, so we can shift it wherever we want *@
+<footer class="border-top footer text-muted bg-black">
+	<div class="container text-light">
+
+		&copy; 2025 - CyberSecurityThreatDetector - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+	</div>
+</footer>
+
+
+
+
+

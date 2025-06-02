@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\background.jpg" />
+    <Content Remove="wwwroot\cases.jpg" />
+    <Content Remove="wwwroot\Email_icon.jpg" />
+    <Content Remove="wwwroot\images.jpg" />
+    <Content Remove="wwwroot\instagram_icon.jpg" />
+    <Content Remove="wwwroot\Phone_icon.jpg" />
+    <Content Remove="wwwroot\threatPic.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\background.jpg" />
+    <None Include="wwwroot\cases.jpg" />
+    <None Include="wwwroot\Email_icon.jpg" />
+    <None Include="wwwroot\images.jpg" />
+    <None Include="wwwroot\instagram_icon.jpg" />
+    <None Include="wwwroot\Phone_icon.jpg" />
+    <None Include="wwwroot\threatPic.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.Core" Version="2.46.6" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="RestSharp" Version="112.1.0" />
+  </ItemGroup>
+
+</Project>
